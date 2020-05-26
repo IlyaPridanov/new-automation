@@ -32,6 +32,7 @@
 }
 
 .client__list {
+  position: static;
   @include list();
 
   display: flex;
@@ -79,3 +80,48 @@
   min-height: 100%;
   text-decoration: none;
 }
+
+@media(max-width:$min-desktop) {
+  .client {
+    border-radius: 0;
+  }
+
+  .client__row {
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+  .client__caption {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .client__text {
+    margin: 0;
+    max-width: 100%;
+  }
+}
+
+@media(max-width:$tablet) {
+  .client {
+    padding: 60px 0;
+  }
+
+  .client__list {
+    display: block;
+  }
+
+  .client__item {
+    border: none;
+    width: 100%;
+
+    &:nth-child(n + 4) {
+      display: none;
+    }
+
+    &:last-child {
+      display: flex;
+    }
+  }
+}
+

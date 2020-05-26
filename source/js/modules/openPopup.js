@@ -3,6 +3,7 @@
 (function () {
   const footerTopBtn = document.querySelector('.footer-top__btn');
   const formPopup = document.querySelector('.form-popup');
+  const formPopupExit = document.querySelector('.form-popup__btn-exit');
 
   const getOpen = function () {
     formPopup.classList.remove('hidden');
@@ -14,6 +15,10 @@
 
   footerTopBtn.addEventListener('click' , function() {
     getOpen();
+  })
+
+  formPopupExit.addEventListener('click' , function() {
+    getClose();
   })
 
   formPopup.addEventListener('click' , function(event) {

@@ -10,7 +10,7 @@
     no-repeat;
   background-position: 
     center,
-    96.8% top;
+    calc(50% + 316px) top;
 }
 
 .main__caption {
@@ -40,4 +40,30 @@
 
 .main__link {
   width: 220px;
+}
+
+@media(max-width:$min-desktop) {
+  .main {
+    background-position: center,calc(50% + 380px) top;
+  }
+}
+
+@media(max-width:$tablet) {
+  .main {
+    padding-top: 30px;
+    padding-bottom: 75px;
+    background-image: $main-gradient;
+  }
+
+  .main__link,
+  .main__text,
+  .main__caption {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .main__caption {
+    font-size: 50px;
+    line-height: 1.1;
+  }
 }

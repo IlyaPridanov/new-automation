@@ -7,8 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="Put your description here.">
-  <link rel="preload" href="fonts/Galien-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 </head>
@@ -23,34 +21,36 @@
           <use xlink:href="#icon-logo"></use>
         </svg>
       </a>
-      <button class="header__button header__button--active hamburger">
+      <button class="header__button hamburger">
         <span class="hamburger__bar hamburger__bar--bar1"></span>
         <span class="hamburger__bar hamburger__bar--bar2"></span>
         <span class="hamburger__bar hamburger__bar--bar3"></span>
         <span class="hamburger__bar hamburger__bar--bar4"></span>
       </button>
     </div>
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-        <li class="header__item">
-          <a href="#" class="header__link">Пункт меню</a>
-        </li>
-      </ul>
+    <nav class="header__nav header__nav--inactive">
+      <div class="container-header">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Пункт меню</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
   <main>
@@ -247,18 +247,25 @@
   </footer>
   <div class="form-popup hidden">
     <form action="#" method="POST">
-      <h3 class="contact-caption form-popup__caption">Send us message</h3>
+      <h3 class="contact-caption form-popup__caption">
+        Send us message
+        <button class="form-popup__btn-exit" type="button">
+          <svg  width="30" height="30">
+            <use xlink:href="#icon-exit"></use>
+          </svg>
+        </button>
+      </h3>
       <label>
         Full Name
-        <input type="text" name="name" id="name" placeholder="Your Name">
+        <input type="text" name="name" id="name" placeholder="Your Name" minlength="3" required >
       </label>
       <label>
         Email
-        <input type="email" name="name" id="name" placeholder="Your Email">
+        <input type="email" name="email" id="email" placeholder="Your Email" required >
       </label>
       <label>
         Message
-        <textarea name="message" id="message" placeholder="Your Message"></textarea>
+        <textarea name="message" id="message" placeholder="Your Message" required minlength="3"></textarea>
       </label>
       <button class="button form-popup__btn" type="submit">SUBMIT</button>
     </form>

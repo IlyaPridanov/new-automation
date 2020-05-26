@@ -28,10 +28,48 @@
       margin-right: 10px; 
   }
 }
+@media(max-width:$desktop) {
+  .options__card--left {
+    margin-left: 0;
+  }
+
+  .options__colum--right {
+    padding-left: 0;
+
+    & .options__card {
+      margin-left: auto;
+    }
+  }
+}
 
 @media(max-width:$tablet) {
+  .options {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+
   .options__caption {
       max-width: 100%;
       width: 100%;
+      margin-bottom: 60px;
+  }
+
+  .options__colum {
+    width: 100%;
+  }
+
+  .options__card {
+    margin-bottom: 60px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .options__colum--right {
+    & .options__card {
+      margin-left: 0;
+    }
   }
 }
