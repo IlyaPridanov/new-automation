@@ -1,0 +1,111 @@
+.footer-bottom {
+  padding: 93px 0 65px;
+}
+
+.footer-bottom__row {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.footer-bottom__column {
+  &:first-child {
+    margin-right: 16%;
+  }
+
+  &:last-child {
+    margin-left: 70px;
+  }
+}
+
+.footer-bottom__logo {
+  @include hover();
+  display: flex;
+  margin-bottom: 36px;
+
+  font-family: $gilroy;
+  font-size: 28px;
+  line-height: 1.64;
+  letter-spacing: 0.02em;
+  color: $white;
+  text-decoration: none;
+
+  & svg {
+    display: block;
+    align-self: flex-end;
+    margin-right: 16px;
+  }
+}
+
+.footer-bottom__contact-list {
+  @include list();
+}
+
+.footer-bottom__contact-item {
+  margin-bottom: 24px;
+}
+
+.footer-bottom__contact-link {
+  @include hover();
+  max-width: 265px;
+  display: block;
+  position: relative;
+  padding-left: 36px;
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: $white;
+
+  & span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+}
+
+.footer-bottom__column-caption {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-family: $gilroy;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;    
+  color: $white;
+}
+
+.footer-bottom__list {
+  @include list();
+}
+
+.footer-bottom__item {
+  margin-bottom: 14px;
+}
+
+.footer-bottom__link {
+  @include hover();
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.05em;
+
+  color: $white;
+  text-decoration: none;
+}
+
+.footer-bottom__copy {
+  margin: 0;
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.05em;
+  color: $white;
+  opacity: 0.4;
+}

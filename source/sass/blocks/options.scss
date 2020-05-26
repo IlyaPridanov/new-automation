@@ -1,0 +1,37 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 190px;
+  padding-bottom: 114px;
+}
+
+.options__caption {
+  margin: 0;
+  margin-bottom: 160px;
+  max-width: 370px;
+}
+
+.options__colum {
+  width: 50%;
+}
+
+.options__colum--right {
+  padding-left: 90px;
+}
+
+.options__card {
+  margin-top: 4px;
+  margin-bottom: 98px;
+
+  &--left {
+      margin-left: auto;
+      margin-right: 10px; 
+  }
+}
+
+@media(max-width:$tablet) {
+  .options__caption {
+      max-width: 100%;
+      width: 100%;
+  }
+}

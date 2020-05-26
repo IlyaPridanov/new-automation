@@ -1,0 +1,56 @@
+.header {
+  position: relative;
+  padding: 48px 0 0;
+}
+
+.header__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  @include hover();
+}
+
+.header__list {
+  @include list();
+  display: flex;
+  justify-content: center;
+}
+
+.header__item {
+  margin: 0 15px;
+}
+
+.header__link {
+  @include hover();
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $primary-color;
+}
+
+.header__button {
+  margin-top: 8px;
+  margin-right: 4px;
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__nav {
+  @include menu();
+
+  background-color: $white;
+}
+
+@media(max-width:$tablet) {
+  .header__list {
+    display: block;
+  }
+
+  .header__item {
+    text-align: center;
+  }
+}

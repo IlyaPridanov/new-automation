@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 380px;
+  max-width: 100%;
+  min-height: 525px;
+
+  box-shadow: $card-shadow;
+  border-radius: 10px;
+}
+
+.card__img {
+  height: 186px;
+  width: 100%;
+  position: relative;
+  
+  & img {
+    position: absolute;
+    top: 0;
+    left: 41%;
+    transform: translateX(-50%);
+    object-fit: cover;
+  }
+
+  &--bottom img {
+    top: -72px;
+    left: 52%;
+  }
+}
+
+.card__caption {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-family: $gilroy;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+
+  color: $primary-dark-color;
+}
+
+.card__text {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 0.05em;
+  color: $primary-dark-color;
+
+  opacity: 0.6;
+}
+
+.card__link {
+  position: relative;
+  margin-top: auto;
+
+  font-family: $gilroy;
+  font-size: 14px;
+  line-height: 2.14;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: $primary-light-color;
+
+  & svg {
+    position: absolute;
+    left: 41%;
+    top: 50%;
+    transform: translate(-10px , -50%);
+    transition: all 0.3s ease-in;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+
+  &:focus svg,
+  &:hover svg,
+  &:active svg {
+    transition: all 0.3s ease-in;
+    transform: translate(0 , -50%);
+  }
+}

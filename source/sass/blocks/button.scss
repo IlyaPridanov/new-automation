@@ -1,0 +1,19 @@
+.button {
+  @include hover();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: $white;
+  
+  background-color: $primary-light-color;
+  box-shadow: $link-shadow;
+  border-radius: 10px;
+}

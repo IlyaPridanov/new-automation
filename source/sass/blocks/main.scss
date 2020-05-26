@@ -1,0 +1,43 @@
+.main {
+  padding-bottom: 190px;
+  padding-top: 91px;
+  
+  background-image: 
+    $main-gradient,
+    url('../img/main-bcg.svg');
+  background-repeat: 
+    no-repeat,
+    no-repeat;
+  background-position: 
+    center,
+    96.8% top;
+}
+
+.main__caption {
+  margin: 0;
+  margin-bottom: 42px;
+  max-width: 515px;
+
+  font-family: $galien;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: $primary-dark-color;
+}
+
+.main__text {
+  max-width: 425px;
+  margin-bottom: 78px;
+
+  font-family: $gilroy;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.05em;
+  color: $primary-dark-color;
+}
+
+.main__link {
+  width: 220px;
+}
