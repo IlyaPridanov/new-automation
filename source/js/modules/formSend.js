@@ -2,7 +2,8 @@
 
 (function () {
   const formPopup = document.querySelector('.form-popup');
-  const successPopup = document.querySelector('.success-popup');
+  const successPopup = document.querySelector('.result-popup[data-popup="success"]');
+  const errorPopup = document.querySelector('.result-popup[data-popup="error"]');
   const form = document.querySelector('.form-popup form');
   const formBtn = document.querySelector('.form-popup .form-popup__btn');
   const textarea = document.querySelector('.form-popup textarea');
@@ -15,7 +16,9 @@
   };
 
   const errorForm = function() {
-    alert('Беда!');
+    formPopup.classList.add('hidden');
+    errorPopup.classList.remove('hidden');
+    setTimeout(() => errorPopup.classList.add('hidden'), 1000);
   };
 
   form.addEventListener('submit', function (evt) {

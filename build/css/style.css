@@ -643,6 +643,8 @@ img {
     padding-left: 15px; } }
 
 @media (max-width: 767px) {
+  .header {
+    padding-top: 24px; }
   .header__list {
     display: block; }
   .header__item {
@@ -1337,13 +1339,13 @@ img {
   letter-spacing: 0.04em;
   color: #1F3F68; }
 
-.success-popup {
+.result-popup {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8); }
 
-.success-popup__caption {
+.result-popup__caption {
   position: fixed;
   left: 50%;
   top: 50%;

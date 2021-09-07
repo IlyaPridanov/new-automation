@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="Put your description here.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -70,11 +71,11 @@
         <h1 class="main__caption">New Automation Tool for Your Home</h1>
         <p class="main__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-           Faucibus tristique vulputate ultrices ut mauris 
+           Faucibus tristique vulputate ultrices ut mauris
            tellus at. Posuere sollicitudin odio tellus elit.
         </p>
         <a href="#" class="button main__link">See Our Project</a>
-      </div> 
+      </div>
     </section>
     <section class="options container">
       <div class="options__colum">
@@ -89,8 +90,8 @@
             Make Your business To Be Better Famous In Internet
           </h3>
           <p class="card__text">
-            Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor 
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
           <a href="#" class="card__link">
@@ -107,11 +108,11 @@
             <img src="img/card-2.svg" alt="card-2">
           </div>
           <h3 class="card__caption">
-            Bring Technology To Your Comfrotable Home 
+            Bring Technology To Your Comfrotable Home
           </h3>
           <p class="card__text">
-            Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor 
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
           <a href="#" class="card__link">
@@ -124,13 +125,13 @@
         <div class="options__card card">
           <div class="card__img">
             <img src="img/card-3.svg" alt="card-2">
-          </div>          
+          </div>
           <h3 class="card__caption">
             Build Your Digital Product That Suitable For Your Need
           </h3>
           <p class="card__text">
-            Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit, sed do eiusmod tempor 
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit, sed do eiusmod tempor
             incididunt ut labore et dolore magna aliqua.
           </p>
           <a href="#" class="card__link">
@@ -147,8 +148,8 @@
         <div class="client__row">
           <h2 class="client__caption caption">Our Beloved Client</h2>
           <p class="client__text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
             aliqua. Ut enim ad minim veniam.
           </p>
         </div>
@@ -174,9 +175,9 @@
           <div class="footer-top__column">
             <h2 class="footer-top__caption caption">Intersted to woek with our team?</h2>
             <p class="footer-top__text">
-              Lorem ipsum dolor sit amet, consectetur 
-              adipisicing elit, sed do eiusmod tempor 
-              incididunt ut labore et dolore magna aliqua. 
+              Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam.
             </p>
           </div>
@@ -268,21 +269,24 @@
       </h3>
       <label>
         Full Name
-        <input type="text" name="name" id="name" placeholder="Your Name" minlength="3" required="">
+        <input type="text" name="name" id="name" placeholder="Your Name" minlength="3">
       </label>
       <label>
         Email
-        <input type="email" name="email" id="email" placeholder="Your Email" required="">
+        <input type="email" name="email" id="email" placeholder="Your Email">
       </label>
       <label>
         Message
-        <textarea name="message" id="message" placeholder="Your Message" required="" minlength="3"></textarea>
+        <textarea name="message" id="message" placeholder="Your Message" minlength="3"></textarea>
       </label>
       <button class="button form-popup__btn" type="submit">SUBMIT</button>
     </form>
   </div>
-  <div class="success-popup hidden">
-    <h3 class="success-popup__caption contact-caption">Форма успешно отправлена!</h3>
+  <div class="result-popup hidden" data-popup="success">
+    <h3 class="result-popup__caption contact-caption">Your message successfully sent</h3>
+  </div>
+  <div class="result-popup hidden" data-popup="error">
+    <h3 class="result-popup__caption contact-caption">Беда!</h3>
   </div>
   <script src="js/script.min.js"></script>
 </body>

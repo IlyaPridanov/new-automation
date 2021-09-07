@@ -93,7 +93,8 @@
 
 (function () {
   var formPopup = document.querySelector('.form-popup');
-  var successPopup = document.querySelector('.success-popup');
+  var successPopup = document.querySelector('.result-popup[data-popup="success"]');
+  var errorPopup = document.querySelector('.result-popup[data-popup="error"]');
   var form = document.querySelector('.form-popup form');
   var formBtn = document.querySelector('.form-popup .form-popup__btn');
   var textarea = document.querySelector('.form-popup textarea');
@@ -108,7 +109,11 @@
   };
 
   var errorForm = function errorForm() {
-    alert('Беда!');
+    formPopup.classList.add('hidden');
+    errorPopup.classList.remove('hidden');
+    setTimeout(function () {
+      return errorPopup.classList.add('hidden');
+    }, 1000);
   };
 
   form.addEventListener('submit', function (evt) {
