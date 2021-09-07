@@ -23,13 +23,24 @@
   var footerTopBtn = document.querySelector('.footer-top__btn');
   var formPopup = document.querySelector('.form-popup');
   var formPopupExit = document.querySelector('.form-popup__btn-exit');
+  var body = document.querySelector('body');
 
   var getOpen = function getOpen() {
+    var div = document.createElement('div');
+    div.style.overflowY = 'scroll';
+    div.style.width = '50px';
+    div.style.height = '50px';
+    document.body.append(div);
+    var scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
     formPopup.classList.remove('hidden');
+    body.style.overflow = 'hidden';
+    body.style.paddingRight = scrollWidth + 'px';
   };
 
   var getClose = function getClose() {
     formPopup.classList.add('hidden');
+    body.style = '';
   };
 
   footerTopBtn.addEventListener('click', function () {
