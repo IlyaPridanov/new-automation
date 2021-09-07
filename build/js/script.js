@@ -99,6 +99,8 @@
   var formBtn = document.querySelector('.form-popup .form-popup__btn');
   var textarea = document.querySelector('.form-popup textarea');
   var input = document.querySelectorAll('.form-popup input');
+  var body = document.querySelector('body');
+  var stopSubmit = false;
 
   var successForm = function successForm() {
     formPopup.classList.add('hidden');
@@ -106,6 +108,7 @@
     setTimeout(function () {
       return successPopup.classList.add('hidden');
     }, 1000);
+    body.style = '';
   };
 
   var errorForm = function errorForm() {
@@ -114,37 +117,53 @@
     setTimeout(function () {
       return errorPopup.classList.add('hidden');
     }, 1000);
+    body.style = '';
   };
 
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    window.backend.upload(new FormData(form), successForm, errorForm);
-  });
-  formBtn.addEventListener('click', function () {
-    if (!textarea.checkValidity()) {
-      textarea.classList.add('invalid');
-    }
 
+    if (!stopSubmit) {
+      window.backend.upload(new FormData(form), successForm, errorForm);
+    }
+  });
+
+  var getTrueTextarea = function getTrueTextarea() {
+    if (textarea.value.length < 3) {
+      textarea.classList.add('invalid');
+      textarea.setCustomValidity('Не меньше трёх букв!');
+      stopSubmit = true;
+    } else {
+      textarea.classList.remove('invalid');
+      textarea.setCustomValidity('');
+      stopSubmit = false;
+    }
+  };
+
+  var getTrueInput = function getTrueInput(thisInput) {
+    if (thisInput.value.length < 1) {
+      thisInput.classList.add('invalid');
+      thisInput.setCustomValidity('Не должен быть пустой!');
+      stopSubmit = true;
+    } else {
+      thisInput.classList.remove('invalid');
+      thisInput.setCustomValidity('');
+      stopSubmit = false;
+    }
+  };
+
+  formBtn.addEventListener('click', function () {
+    getTrueTextarea();
     input.forEach(function (item) {
-      if (!item.checkValidity()) {
-        item.classList.add('invalid');
-      }
+      getTrueInput(item);
     });
   });
   textarea.addEventListener('input', function () {
-    if (!textarea.checkValidity()) {
-      textarea.classList.add('invalid');
-    } else {
-      textarea.classList.remove('invalid');
-    }
+    getTrueTextarea();
   });
   input.forEach(function (item) {
     item.addEventListener('input', function () {
-      if (!this.checkValidity()) {
-        this.classList.add('invalid');
-      } else {
-        this.classList.remove('invalid');
-      }
+      getTrueInput(this);
     });
   });
 })();
